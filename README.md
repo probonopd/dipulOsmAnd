@@ -1,6 +1,6 @@
 # dipulOsmAnd
 
-All important information on RMZs and TMZs for UAS in German airspace as offline tiles for [OsmAnd](https://osmand.net/)
+All important information on RMZs and TMZs for UAS in German airspace as offline tiles for [OsmAnd](https://osmand.net/). Data provided by the Digital Platform for Unmanned Aviation (dipul) published by the German Federal Ministry for Digital and Transport (BMDV)
 
 ## Motivation
 
