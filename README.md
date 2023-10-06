@@ -2,6 +2,12 @@
 
 All important information on the current NOTAMs, RMZs and TMZs for UAS in German airspace as offline tiles for OsmAnd
 
+## Motivation
+
+Have functionality similar to the proprietary [Droniq app](https://droniq.de/droniq-app/) but
+* Using an open source app, [OsmAnd](https://osmand.net/)
+* Offline (no internet connection required while out in the field)
+
 ## Usage
 
 Run the Python script like this:
