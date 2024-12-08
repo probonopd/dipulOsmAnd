@@ -47,6 +47,27 @@ DIPUL/12/2135/1392.png.tile
 ...
 ```
 
-Put the directory "DIPUL" into the directory `Android/data/net.osmand.plus/files/tiles` on the Android device.
+Put the directory "dipul" folder to `/storage/emulated/0/Android/media/net.osmand.plus/files/tiles/dipul` on the Android device. Before doing so, set up OsmAnd to use the `/storage/emulated/0/Android/media/net.osmand.plus/files/` folder instead of the default `data` one, which is no longer easily accessible in newer versions of Android.
+
+Create `/storage/emulated/0/Android/media/net.osmand.plus/files/tiles/dipul/.metainfo` with the following content
+
+```
+[url_template]
+https://uas-betrieb.de/geoservices/dipul/ows?bbox={bbox}&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&LAYERS=dipul:flugplaetze,dipul:flughaefen,dipul:kontrollzonen,dipul:flugbeschraenkungsgebiete,dipul:bundesstrassen,dipul:bundesautobahnen,dipul:bahnanlagen,dipul:binnenwasserstrassen,dipul:seewasserstrassen,dipul:schifffahrtsanlagen,dipul:wohngrundstuecke,dipul:freibaeder,dipul:industrieanlagen,dipul:kraftwerke,dipul:umspannwerke,dipul:stromleitungen,dipul:windkraftanlagen,dipul:justizvollzugsanstalten,dipul:militaerische_anlagen,dipul:labore,dipul:behoerden,dipul:diplomatische_vertretungen,dipul:internationale_organisationen,dipul:polizei,dipul:sicherheitsbehoerden,dipul:krankenhaeuser,dipul:nationalparks,dipul:naturschutzgebiete,dipul:vogelschutzgebiete,dipul:ffh-gebiete&TILED=false&WIDTH=512&HEIGHT=512&CRS=CRS:84&STYLES=
+[ext]
+.png
+[min_zoom]
+8
+[max_zoom]
+20
+[tile_size]
+512
+[img_density]
+16
+[avg_img_size]
+18000
+```
+
+Now "dipul" can be selected as an overlay.
 
 Then it can be selected as an overlay map in the [OsmAnd](https://osmand.net/) app.
