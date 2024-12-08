@@ -68,6 +68,6 @@ https://uas-betrieb.de/geoservices/dipul/ows?bbox={bbox}&SERVICE=WMS&VERSION=1.3
 18000
 ```
 
-Now "dipul" can be selected as an overlay.
+Then "dipul" can be selected as an overlay map in the [OsmAnd](https://osmand.net/) app.
 
-Then it can be selected as an overlay map in the [OsmAnd](https://osmand.net/) app.
+Actually, when using this `.metainfo`, then there is no need to copy the pre-downloaded tiles using the script in this repository, as the Android device will download them on the fly and keep them forever (if not configured otherwise).
