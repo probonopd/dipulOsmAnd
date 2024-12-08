@@ -14,7 +14,7 @@ class Tile:
         self.x = x
         self.y = y
         self.url = get_url_for_tile(zoom, x, y)
-        self.filename = "DIPUL/" + str(zoom) + "/" + str(x) + "/" + str(y) + ".png.tile"
+        self.filename = "dipul/" + str(zoom) + "/" + str(x) + "/" + str(y) + ".png.tile"
 
 def num2deg(zoom, xtile, ytile):
   n = 1 << zoom
@@ -164,6 +164,7 @@ print()
 
 metainfo = """
 [url_template]
+https://uas-betrieb.de/geoservices/dipul/ows?bbox={bbox}&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&LAYERS=dipul:flugplaetze,dipul:flughaefen,dipul:kontrollzonen,dipul:flugbeschraenkungsgebiete,dipul:bundesstrassen,dipul:bundesautobahnen,dipul:bahnanlagen,dipul:binnenwasserstrassen,dipul:seewasserstrassen,dipul:schifffahrtsanlagen,dipul:wohngrundstuecke,dipul:freibaeder,dipul:industrieanlagen,dipul:kraftwerke,dipul:umspannwerke,dipul:stromleitungen,dipul:windkraftanlagen,dipul:justizvollzugsanstalten,dipul:militaerische_anlagen,dipul:labore,dipul:behoerden,dipul:diplomatische_vertretungen,dipul:internationale_organisationen,dipul:polizei,dipul:sicherheitsbehoerden,dipul:krankenhaeuser,dipul:nationalparks,dipul:naturschutzgebiete,dipul:vogelschutzgebiete,dipul:ffh-gebiete&TILED=false&WIDTH=512&HEIGHT=512&CRS=CRS:84&STYLES=
 [ext]
 .png
 [min_zoom]
@@ -211,6 +212,6 @@ for tile in tiles:
 
 print("Number of tiles:", len(tiles))
 
-# Create the file DIPUL/.metainfo
-with open("DIPUL/.metainfo", "w") as f:
+# Create the file dipul/.metainfo
+with open("dipul/.metainfo", "w") as f:
     f.write(metainfo)
